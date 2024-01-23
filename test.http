@@ -1,0 +1,28 @@
+POST https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-ekhEs1fpw_-g7RKWFED64a9zw-JFAzFu7ZeOgQ== HTTP/1.1
+Content-Type: application/json
+
+{
+    "AdminName": "Adam",
+    "Name": "Oskar",
+    "Status": "Zlecone"
+}
+
+GET https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-ekhEs1fpw_-g7RKWFED64a9zw-JFAzFu7ZeOgQ== HTTP/1.1
+Content-Type: application/json
+
+{}
+
+DELETE https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-ekhEs1fpw_-g7RKWFED64a9zw-JFAzFu7ZeOgQ== HTTP/1.1
+Content-Type: application/json
+
+{
+    "Id": 1
+}
+
+PUT https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-ekhEs1fpw_-g7RKWFED64a9zw-JFAzFu7ZeOgQ== HTTP/1.1
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Status": "Wykonane"
+}
