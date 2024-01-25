@@ -19,6 +19,8 @@ namespace TaskManager.Services
             {
                 AdminName = taskEntity.AdminName,
                 Name = taskEntity.Name,
+                Task = taskEntity.Task,
+                TaskDesc = taskEntity.TaskDesc,
                 Status = taskEntity.Status,
             };
             db.Tasks.Add(entity);
@@ -45,6 +47,8 @@ namespace TaskManager.Services
                 Id = s.Id,
                 AdminName = s.AdminName,
                 Name = s.Name,
+                Task = s.Task,
+                TaskDesc = s.TaskDesc,
                 Date = s.Date,
                 Status = s.Status,
                 ModifiedStatus = s.ModifiedStatus

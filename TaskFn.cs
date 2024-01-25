@@ -21,7 +21,7 @@ namespace TaskManager.Functions
         }
 
         [Function("TaskFn")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", "delete", "put", "find")] HttpRequestData req)
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", "delete", "put")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -51,14 +51,7 @@ namespace TaskManager.Functions
                     var taskToDelete = JsonSerializer.Deserialize<TaskEntity>(deleteJson);
                     databaseTaskService.DeleteTask(taskToDelete.Id);
                     response.WriteString("Task deleted successfully");
-                    break;   
-                // case "FIND":
-                //     StreamReader findReader = new StreamReader (req.Body, System.Text.Encoding.UTF8);
-                //     var findJson = findReader.ReadToEnd();
-                //     var taskStatusToFind = JsonSerializer.Deserialize<TaskEntity>(findJson);
-                //     databaseTaskService.FindTaskByStatus(taskStatusToFind.Status);
-                //     response.WriteAsJsonAsync(taskStatusToFind);
-                //     break;
+                    break;
             }
             return response;
         }

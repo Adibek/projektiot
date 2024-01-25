@@ -20,6 +20,8 @@ namespace TaskManager.Database
             entity.ToTable("Task");
             entity.Property(p => p.AdminName).IsRequired().HasMaxLength(200);
             entity.Property(p => p.Name).IsRequired().HasMaxLength(200);
+            entity.Property(p => p.Task).IsRequired().HasMaxLength(200);
+            entity.Property(p => p.TaskDesc).IsRequired().HasMaxLength(400);
             entity.Property(p => p.Status).IsRequired();
         }
 

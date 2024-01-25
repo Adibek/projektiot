@@ -4,6 +4,8 @@ Content-Type: application/json
 {
     "AdminName": "Adam",
     "Name": "Oskar",
+    "Task": "Wykonanie aplikacji",
+    "TaskDesc": "Wykonaj prosta aplikacje z wykorzystaniem funkcji Azure",
     "Status": "Zlecone"
 }
 
@@ -16,13 +18,13 @@ DELETE https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-e
 Content-Type: application/json
 
 {
-    "Id": 1
+    "Id": 3
 }
 
 PUT https://task-function.azurewebsites.net/api/TaskFn?code=FxImREvUVUaFMZn-ekhEs1fpw_-g7RKWFED64a9zw-JFAzFu7ZeOgQ== HTTP/1.1
 Content-Type: application/json
 
 {
-    "Id": 1,
+    "Id": 3,
     "Status": "Wykonane"
 }
